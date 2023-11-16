@@ -26,7 +26,7 @@ To start:
 run the command prompt on the folder
 use the command:
 ```bash
-python gui/mainWindow.py
+python .\gui\mainWindow.py
 ```
 
 After that on the gui (Graphical User Interface):
