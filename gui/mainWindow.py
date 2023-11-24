@@ -299,6 +299,7 @@ class MainWindow(QMainWindow):
 
         # Add select options
         self.select_options = QComboBox()
+        self.select_options.addItem('Default')
         self.select_options.addItem('Random Forest')
         self.select_options.addItem('KNN')
         self.select_options.addItem('MLP')
@@ -309,42 +310,42 @@ class MainWindow(QMainWindow):
         self.trained_group.setLayout(trained_model_layout)
 
         # Add configuration models
-        model_config = QHBoxLayout()
+#        model_config = QHBoxLayout()
 
-        self.trained_config = QGroupBox('Model Configuration')
-        self.trained_config.setSizePolicy(
-            QSizePolicy.Preferred, QSizePolicy.Expanding)
+#        self.trained_config = QGroupBox('Model Configuration')
+#        self.trained_config.setSizePolicy(
+#            QSizePolicy.Preferred, QSizePolicy.Expanding)
 
-        num_of_train_layout = QVBoxLayout()
-        shuffle_layout = QVBoxLayout()
+#        num_of_train_layout = QVBoxLayout()
+#        shuffle_layout = QVBoxLayout()
 
-        self.num_of_train = QSpinBox(suffix='%')
-        self.shuffle = QSpinBox(minimum=0, maximum=1)
+#        self.num_of_train = QSpinBox(suffix='%')
+#        self.shuffle = QSpinBox(minimum=0, maximum=1)
 
         # Train layout
-        num_of_train_layout.addWidget(QLabel('Train'), 1)
-        num_of_train_layout.addWidget(self.num_of_train, 1)
-        num_of_train_layout.setSpacing(2)
+#        num_of_train_layout.addWidget(QLabel('Train'), 1)
+#        num_of_train_layout.addWidget(self.num_of_train, 1)
+#        num_of_train_layout.setSpacing(2)
 
         # Shuffle Layout
-        shuffle_layout.addWidget(QLabel('Shuffle'))
-        shuffle_layout.addWidget(self.shuffle)
-        shuffle_layout.setSpacing(2)
+#        shuffle_layout.addWidget(QLabel('Shuffle'))
+#        shuffle_layout.addWidget(self.shuffle)
+#        shuffle_layout.setSpacing(2)
 
         # Main config model layout
         config_inputs = QHBoxLayout()
-        config_inputs.addLayout(num_of_train_layout)
-        config_inputs.addLayout(shuffle_layout)
+#        config_inputs.addLayout(num_of_train_layout)
+#        config_inputs.addLayout(shuffle_layout)
 
-        model_config.addWidget(QLabel('Config:'))
-        model_config.addLayout(config_inputs)
+#        model_config.addWidget(QLabel('Config:'))
+#        model_config.addLayout(config_inputs)
 
-        self.trained_config.setLayout(model_config)
+#        self.trained_config.setLayout(model_config)
 
         # Main model layout
         main_models_layout = QVBoxLayout()
         main_models_layout.addWidget(self.trained_group)
-        main_models_layout.addWidget(self.trained_config)
+ #       main_models_layout.addWidget(self.trained_config)
 
         # Add button to start and finish
         button_layout = QVBoxLayout()
